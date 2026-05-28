@@ -1,57 +1,76 @@
-export default function Home() {
+ export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
-      <section className="max-w-6xl mx-auto px-6 py-24 text-center">
-        <h1 className="text-6xl font-bold">
-          NEXOR GROUP
+    <div>
+
+      {/* HERO */}
+      <section style={{
+        textAlign: "center",
+        padding: "120px 20px"
+      }}>
+        <h1 style={{ fontSize: 56, marginBottom: 20 }}>
+          Construimos el futuro digital
         </h1>
 
-        <p className="mt-6 text-xl text-zinc-400">
-          Soluciones digitales impulsadas por IA
+        <p style={{ maxWidth: 700, margin: "0 auto", color: "rgba(255,255,255,0.7)" }}>
+          En Grupo NEXOR desarrollamos software, automatización e infraestructura
+          digital para empresas que quieren crecer.
         </p>
 
-        <div className="mt-10 flex justify-center gap-4">
-          <button className="bg-white text-black px-6 py-3 rounded-2xl font-semibold">
-            Contactar
-          </button>
-
-          <button className="border border-zinc-700 px-6 py-3 rounded-2xl">
-            Servicios
-          </button>
+        <div style={{ marginTop: 30 }}>
+          <a href="#servicios" style={{
+            padding: "14px 24px",
+            background: "white",
+            color: "#0b1220",
+            borderRadius: 12,
+            textDecoration: "none",
+            fontWeight: "bold"
+          }}>
+            Ver servicios
+          </a>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-3 gap-8">
-        <div className="bg-zinc-900 p-8 rounded-3xl">
-          <h2 className="text-2xl font-bold mb-4">
-            Correos Corporativos
-          </h2>
+      {/* SERVICIOS */}
+      <section id="servicios" style={{ padding: "80px 40px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 40 }}>
+          Servicios
+        </h2>
 
-          <p className="text-zinc-400">
-            Configuración profesional de dominios y emails empresariales.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-8 rounded-3xl">
-          <h2 className="text-2xl font-bold mb-4">
-            Automatización IA
-          </h2>
-
-          <p className="text-zinc-400">
-            Automatizamos procesos y atención al cliente con inteligencia artificial.
-          </p>
-        </div>
-
-        <div className="bg-zinc-900 p-8 rounded-3xl">
-          <h2 className="text-2xl font-bold mb-4">
-            Diseño Web
-          </h2>
-
-          <p className="text-zinc-400">
-            Creamos landing pages modernas y profesionales.
-          </p>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+          gap: 20
+        }}>
+          
+          {[
+            { t: "Desarrollo Web", d: "Sitios modernos y escalables." },
+            { t: "Automatización", d: "Procesos inteligentes para empresas." },
+            { t: "Software a medida", d: "Soluciones personalizadas." }
+          ].map((s) => (
+            <div key={s.t} style={{
+              padding: 20,
+              background: "rgba(255,255,255,0.05)",
+              borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.1)"
+            }}>
+              <h3>{s.t}</h3>
+              <p style={{ color: "rgba(255,255,255,0.7)" }}>{s.d}</p>
+            </div>
+          ))}
         </div>
       </section>
-    </main>
+
+      {/* CTA */}
+      <section style={{
+        textAlign: "center",
+        padding: "100px 20px"
+      }}>
+        <h2>¿Listo para escalar tu empresa?</h2>
+        <p style={{ color: "rgba(255,255,255,0.7)" }}>
+          Conversemos y construyamos algo grande.
+        </p>
+      </section>
+
+    </div>
   );
 }

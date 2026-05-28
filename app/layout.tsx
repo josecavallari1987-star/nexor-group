@@ -1,108 +1,69 @@
- export default function Home() {
+ export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-      
-      {/* HERO */}
-      <section style={{
-        textAlign: "center",
-        padding: "100px 20px"
+    <html lang="es">
+      <body style={{
+        margin: 0,
+        fontFamily: "Inter, Arial, sans-serif",
+        background: "#0b1220",
+        color: "white"
       }}>
         
-        <h1 style={{
-          fontSize: "48px",
-          marginBottom: "20px",
-          color: "white"
-        }}>
-          Construimos soluciones digitales para el futuro
-        </h1>
-
-        <p style={{
-          fontSize: "18px",
-          color: "rgba(255,255,255,0.7)",
-          maxWidth: "700px",
-          margin: "0 auto 30px"
-        }}>
-          En Grupo NEXOR desarrollamos tecnología, automatización y sistemas
-          que impulsan empresas hacia la nueva era digital.
-        </p>
-
-        <a
-          href="#servicios"
-          style={{
-            background: "linear-gradient(90deg, #2563eb, #7c3aed)",
-            color: "white",
-            padding: "14px 24px",
-            borderRadius: "12px",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}
-        >
-          Ver servicios
-        </a>
-      </section>
-
-      {/* SERVICIOS */}
-      <section id="servicios" style={{ padding: "80px 20px" }}>
-        
-        <h2 style={{ color: "white", textAlign: "center", marginBottom: "50px" }}>
-          Nuestros servicios
-        </h2>
-
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "20px"
+        {/* NAVBAR */}
+        <header style={{
+          position: "sticky",
+          top: 0,
+          zIndex: 1000,
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          padding: "16px 40px",
+          background: "rgba(15, 23, 42, 0.8)",
+          backdropFilter: "blur(10px)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)"
         }}>
           
-          {[
-            { title: "Desarrollo Web", desc: "Sitios modernos, rápidos y escalables." },
-            { title: "Automatización", desc: "Procesos inteligentes para empresas." },
-            { title: "Software a medida", desc: "Soluciones adaptadas a tu negocio." }
-          ].map((item) => (
-            <div key={item.title} style={{
-              background: "rgba(255,255,255,0.05)",
-              padding: "20px",
-              borderRadius: "12px",
-              border: "1px solid rgba(255,255,255,0.1)"
-            }}>
-              <h3 style={{ color: "white" }}>{item.title}</h3>
-              <p style={{ color: "rgba(255,255,255,0.7)" }}>
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <img src="/logo.png" width={40} />
+            <strong>NEXOR</strong>
+          </div>
 
-      {/* CTA FINAL */}
-      <section style={{
-        textAlign: "center",
-        padding: "100px 20px"
-      }}>
-        
-        <h2 style={{ color: "white", marginBottom: "20px" }}>
-          ¿Listo para transformar tu empresa?
-        </h2>
+          <nav style={{ display: "flex", gap: 25 }}>
+            {["Inicio", "Servicios", "Proyectos", "Contacto"].map((i) => (
+              <a key={i} href="#" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>
+                {i}
+              </a>
+            ))}
+          </nav>
 
-        <p style={{ color: "rgba(255,255,255,0.7)", marginBottom: "30px" }}>
-          Hablemos y construyamos algo grande juntos.
-        </p>
+          <a href="#" style={{
+            background: "linear-gradient(90deg,#2563eb,#7c3aed)",
+            padding: "10px 16px",
+            borderRadius: 10,
+            color: "white",
+            textDecoration: "none"
+          }}>
+            Contacto
+          </a>
+        </header>
 
-        <a
-          href="#"
-          style={{
-            background: "white",
-            color: "#0b1220",
-            padding: "14px 24px",
-            borderRadius: "12px",
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}
-        >
-          Contactar
-        </a>
-      </section>
+        {children}
 
-    </div>
+        {/* FOOTER */}
+        <footer style={{
+          padding: 40,
+          textAlign: "center",
+          borderTop: "1px solid rgba(255,255,255,0.1)",
+          marginTop: 80,
+          color: "rgba(255,255,255,0.6)"
+        }}>
+          © {new Date().getFullYear()} Grupo NEXOR. Todos los derechos reservados.
+        </footer>
+
+      </body>
+    </html>
   );
 }
