@@ -2,99 +2,150 @@
   return (
     <div style={{ color: "white" }}>
 
-      {/* HERO EJECUTIVO */}
+      {/* HERO EXECUTIVE */}
       <section style={{
         textAlign: "center",
-        padding: "140px 20px"
+        padding: "170px 20px"
       }}>
-        <h1 style={{ fontSize: 54, marginBottom: 20 }}>
-          Socio estratégico en operaciones industriales críticas
+        <h1 style={{ fontSize: 60, marginBottom: 20 }}>
+          Improving operational performance in critical industries
         </h1>
 
-        <p style={{ maxWidth: 850, margin: "0 auto", color: "rgba(255,255,255,0.7)", fontSize: 18 }}>
-          En Grupo NEXOR actuamos como socio operativo de empresas del sector petrolero,
-          minero, transporte y construcción, resolviendo gestión administrativa,
-          logística y coordinación operativa con velocidad, precisión y confiabilidad.
+        <p style={{
+          maxWidth: 900,
+          margin: "0 auto",
+          color: "rgba(255,255,255,0.65)",
+          fontSize: 18,
+          lineHeight: 1.6
+        }}>
+          NEXOR is an operational strategy partner focused on industrial execution,
+          administrative optimization and logistics coordination for organizations
+          in high-complexity environments.
         </p>
       </section>
 
-      {/* SECTORES */}
-      <section style={{ padding: "80px 40px", textAlign: "center" }}>
-        <h2>Operamos en sectores críticos</h2>
-
-        <p style={{ color: "rgba(255,255,255,0.6)" }}>
-          Minería • Petróleo • Transporte • Construcción
-        </p>
-      </section>
-
-      {/* PROBLEMAS QUE RESOLVEMOS */}
-      <section style={{ padding: "80px 40px" }}>
+      {/* PROBLEM FRAMING */}
+      <section style={{ padding: "90px 40px" }}>
         <h2 style={{ textAlign: "center", marginBottom: 40 }}>
-          Problemas que resolvemos
+          Operational challenges in industrial environments
         </h2>
 
         <div style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
           gap: 20
         }}>
-
           {[
-            "Falta de coordinación logística en operaciones críticas",
-            "Sobrecarga administrativa en campo y oficinas",
-            "Retrasos operativos por mala gestión documental",
-            "Desconexión entre áreas operativas y administrativas"
+            "Fragmented operational coordination across departments",
+            "Administrative overload reducing field efficiency",
+            "Logistical delays impacting production cycles",
+            "Lack of integration between field and corporate operations"
           ].map((p) => (
             <div key={p} style={{
               padding: 20,
-              background: "rgba(255,255,255,0.05)",
               borderRadius: 12,
-              border: "1px solid rgba(255,255,255,0.1)"
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)"
             }}>
-              <p>{p}</p>
+              {p}
             </div>
           ))}
-
         </div>
       </section>
 
-      {/* CÓMO TRABAJAMOS */}
+      {/* CAPABILITIES */}
+      <section style={{ padding: "90px 40px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 40 }}>
+          Core capabilities
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+          gap: 20
+        }}>
+          {[
+            {
+              t: "Operational Design",
+              d: "Structuring efficient workflows across industrial operations."
+            },
+            {
+              t: "Logistics Coordination",
+              d: "Execution of supply chain and transport operations."
+            },
+            {
+              t: "Administrative Systems",
+              d: "Optimization of documentation and reporting processes."
+            },
+            {
+              t: "Execution Support",
+              d: "On-the-ground operational integration with client teams."
+            }
+          ].map((c) => (
+            <div key={c.t} style={{
+              padding: 22,
+              background: "rgba(255,255,255,0.04)",
+              borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.08)"
+            }}>
+              <h3>{c.t}</h3>
+              <p style={{ color: "rgba(255,255,255,0.65)" }}>{c.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ENGAGEMENT MODEL */}
       <section style={{
-        padding: "80px 40px",
+        padding: "110px 40px",
         textAlign: "center",
         background: "rgba(255,255,255,0.02)"
       }}>
-        <h2>Modelo de trabajo como socio operativo</h2>
+        <h2>Engagement model</h2>
 
-        <p style={{ maxWidth: 800, margin: "20px auto", color: "rgba(255,255,255,0.7)" }}>
-          No somos un proveedor externo. Nos integramos a la operación del cliente
-          como un equipo extendido, reduciendo fricción, tiempos de respuesta
-          y costos operativos.
+        <p style={{
+          maxWidth: 850,
+          margin: "20px auto",
+          color: "rgba(255,255,255,0.65)",
+          lineHeight: 1.6
+        }}>
+          We operate as an embedded partner within client organizations,
+          integrating directly into operational structures to improve efficiency,
+          reduce friction and enhance execution capacity.
+        </p>
+      </section>
+
+      {/* INDUSTRIES */}
+      <section style={{ padding: "90px 40px", textAlign: "center" }}>
+        <h2>Industries</h2>
+
+        <p style={{ color: "rgba(255,255,255,0.6)" }}>
+          Oil & Gas • Mining • Transportation • Construction • Infrastructure
         </p>
       </section>
 
       {/* CTA */}
       <section style={{
         textAlign: "center",
-        padding: "120px 20px"
+        padding: "150px 20px"
       }}>
-        <h2>¿Necesitas un socio operativo confiable?</h2>
+        <h2>Engage with NEXOR</h2>
 
-        <p style={{ color: "rgba(255,255,255,0.7)" }}>
-          Hablemos sobre cómo optimizar tus operaciones.
+        <p style={{ color: "rgba(255,255,255,0.65)" }}>
+          Executive-level operational partnerships for industrial organizations.
         </p>
 
         <a href="#" style={{
+          marginTop: 25,
           display: "inline-block",
-          marginTop: 20,
-          padding: "14px 24px",
-          background: "linear-gradient(90deg,#2563eb,#7c3aed)",
+          padding: "14px 26px",
+          background: "white",
+          color: "#0b1220",
           borderRadius: 12,
-          textDecoration: "none",
-          color: "white",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          textDecoration: "none"
         }}>
-          Contactar Dirección
+          Contact leadership team
         </a>
       </section>
 
