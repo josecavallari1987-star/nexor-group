@@ -1,69 +1,69 @@
- export default function RootLayout({
+ "use client";
+
+import { useState } from "react";
+
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const [lang, setLang] = useState<"es" | "en">("es");
+
   return (
-    <html lang="es">
+    <html lang={lang}>
       <body style={{
         margin: 0,
-        fontFamily: "Inter, Arial, sans-serif",
+        fontFamily: "Arial, sans-serif",
         background: "#0b1220",
         color: "white"
       }}>
-        
-        {/* NAVBAR */}
+
+        {/* HEADER PREMIUM */}
         <header style={{
-          position: "sticky",
-          top: 0,
-          zIndex: 1000,
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "16px 40px",
-          background: "rgba(15, 23, 42, 0.8)",
-          backdropFilter: "blur(10px)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)"
+          justifyContent: "center",
+          padding: "40px 20px"
         }}>
-          
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <img src="/logo.png" width={40} />
-            <strong>NEXOR</strong>
-          </div>
-
-          <nav style={{ display: "flex", gap: 25 }}>
-            {["Inicio", "Servicios", "Proyectos", "Contacto"].map((i) => (
-              <a key={i} href="#" style={{ color: "rgba(255,255,255,0.7)", textDecoration: "none" }}>
-                {i}
-              </a>
-            ))}
-          </nav>
-
-          <a href="#" style={{
-            background: "linear-gradient(90deg,#2563eb,#7c3aed)",
-            padding: "10px 16px",
-            borderRadius: 10,
-            color: "white",
-            textDecoration: "none"
-          }}>
-            Contacto
-          </a>
+          <img
+            src="/logo.png"
+            alt="NEXOR"
+            style={{
+              width: 180,
+              height: "auto"
+            }}
+          />
         </header>
 
-        {children}
-
-        {/* FOOTER */}
-        <footer style={{
-          padding: 40,
-          textAlign: "center",
-          borderTop: "1px solid rgba(255,255,255,0.1)",
-          marginTop: 80,
-          color: "rgba(255,255,255,0.6)"
+        {/* LANGUAGE SWITCH */}
+        <div style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 10,
+          marginBottom: 20
         }}>
-          © {new Date().getFullYear()} Grupo NEXOR. Todos los derechos reservados.
-        </footer>
+          <button onClick={() => setLang("es")} style={btn(lang === "es")}>
+            Español
+          </button>
+          <button onClick={() => setLang("en")} style={btn(lang === "en")}>
+            English
+          </button>
+        </div>
+
+        {/* CONTENIDO */}
+        {children}
 
       </body>
     </html>
   );
+}
+
+function btn(active: boolean): React.CSSProperties {
+  return {
+    padding: "8px 14px",
+    borderRadius: 8,
+    border: "1px solid rgba(255,255,255,0.2)",
+    background: active ? "white" : "transparent",
+    color: active ? "#0b1220" : "white",
+    cursor: "pointer"
+  };
 }
