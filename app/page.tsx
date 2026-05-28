@@ -8,26 +8,13 @@
         padding: "120px 20px"
       }}>
         <h1 style={{ fontSize: 56, marginBottom: 20 }}>
-          Construimos el futuro digital
+          Soluciones administrativas y logísticas para la industria
         </h1>
 
-        <p style={{ maxWidth: 700, margin: "0 auto", color: "rgba(255,255,255,0.7)" }}>
-          En Grupo NEXOR desarrollamos software, automatización e infraestructura
-          digital para empresas que quieren crecer.
+        <p style={{ maxWidth: 750, margin: "0 auto", color: "rgba(255,255,255,0.7)" }}>
+          En Grupo NEXOR brindamos soporte operativo, administrativo y logístico a empresas
+          del sector petrolero, minero, transporte y construcción.
         </p>
-
-        <div style={{ marginTop: 30 }}>
-          <a href="#servicios" style={{
-            padding: "14px 24px",
-            background: "white",
-            color: "#0b1220",
-            borderRadius: 12,
-            textDecoration: "none",
-            fontWeight: "bold"
-          }}>
-            Ver servicios
-          </a>
-        </div>
       </section>
 
       {/* SERVICIOS */}
@@ -42,21 +29,42 @@
           gap: 20
         }}>
           
-          {[
-            { t: "Desarrollo Web", d: "Sitios modernos y escalables." },
-            { t: "Automatización", d: "Procesos inteligentes para empresas." },
-            { t: "Software a medida", d: "Soluciones personalizadas." }
-          ].map((s) => (
-            <div key={s.t} style={{
-              padding: 20,
-              background: "rgba(255,255,255,0.05)",
-              borderRadius: 12,
-              border: "1px solid rgba(255,255,255,0.1)"
-            }}>
-              <h3>{s.t}</h3>
-              <p style={{ color: "rgba(255,255,255,0.7)" }}>{s.d}</p>
-            </div>
-          ))}
+          <div style={{
+            padding: 20,
+            background: "rgba(255,255,255,0.05)",
+            borderRadius: 12,
+            border: "1px solid rgba(255,255,255,0.1)"
+          }}>
+            <h3>Logística operativa</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)" }}>
+              Coordinación de transporte y operaciones industriales.
+            </p>
+          </div>
+
+          <div style={{
+            padding: 20,
+            background: "rgba(255,255,255,0.05)",
+            borderRadius: 12,
+            border: "1px solid rgba(255,255,255,0.1)"
+          }}>
+            <h3>Soporte administrativo</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)" }}>
+              Gestión documental y asistencia empresarial.
+            </p>
+          </div>
+
+          <div style={{
+            padding: 20,
+            background: "rgba(255,255,255,0.05)",
+            borderRadius: 12,
+            border: "1px solid rgba(255,255,255,0.1)"
+          }}>
+            <h3>Gestión industrial</h3>
+            <p style={{ color: "rgba(255,255,255,0.7)" }}>
+              Apoyo a sectores petróleo, minería y construcción.
+            </p>
+          </div>
+
         </div>
       </section>
 
@@ -65,9 +73,9 @@
         textAlign: "center",
         padding: "100px 20px"
       }}>
-        <h2>¿Listo para escalar tu empresa?</h2>
+        <h2>¿Necesitas soporte operativo?</h2>
         <p style={{ color: "rgba(255,255,255,0.7)" }}>
-          Conversemos y construyamos algo grande.
+          Hablemos y optimicemos tus operaciones.
         </p>
       </section>
 
