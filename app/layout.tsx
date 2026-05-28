@@ -5,19 +5,36 @@
 }) {
   return (
     <html lang="es">
-      <body style={{ margin: 0, fontFamily: "Arial, sans-serif", background: "#f5f5f5" }}>
+      <body style={{ margin: 0, fontFamily: "Arial, sans-serif" }}>
         
+        {/* NAVBAR */}
         <header style={{
           display: "flex",
+          justifyContent: "space-between",
           alignItems: "center",
-          padding: "15px 30px",
-          background: "#ffffff",
-          borderBottom: "1px solid #ddd"
+          padding: "15px 40px",
+          background: "#0f172a",
+          color: "white"
         }}>
-          <img src="/logo.png" alt="Grupo Nexor" width={140} />
+          
+          {/* LOGO */}
+          <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <img src="/logo.png" alt="NEXOR" width={45} />
+            <strong>GRUPO NEXOR</strong>
+          </div>
+
+          {/* MENU */}
+          <nav style={{ display: "flex", gap: "20px" }}>
+            <a href="#" style={{ color: "white", textDecoration: "none" }}>Inicio</a>
+            <a href="#" style={{ color: "white", textDecoration: "none" }}>Servicios</a>
+            <a href="#" style={{ color: "white", textDecoration: "none" }}>Nosotros</a>
+            <a href="#" style={{ color: "white", textDecoration: "none" }}>Contacto</a>
+          </nav>
+
         </header>
 
-        <main style={{ padding: "30px" }}>
+        {/* CONTENIDO */}
+        <main style={{ padding: "40px" }}>
           {children}
         </main>
 
