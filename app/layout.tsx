@@ -1,16 +1,10 @@
- "use client";
-
-import { useState } from "react";
-
-export default function RootLayout({
+ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [lang, setLang] = useState<"es" | "en">("es");
-
   return (
-    <html lang={lang}>
+    <html lang="es">
       <body style={{
         margin: 0,
         background: "#0b1220",
@@ -18,7 +12,7 @@ export default function RootLayout({
         fontFamily: "Arial, sans-serif"
       }}>
 
-        {/* LOGO GRANDE + SLOGAN */}
+        {/* IDENTIDAD DE FIRMA */}
         <header style={{
           display: "flex",
           flexDirection: "column",
@@ -30,50 +24,25 @@ export default function RootLayout({
           <img
             src="/logo.png"
             alt="NEXOR"
-            style={{ width: 300 }}
+            style={{ width: 320 }}
           />
 
           <h2 style={{
-            fontWeight: 300,
             marginTop: 20,
             fontSize: 18,
+            fontWeight: 300,
             color: "rgba(255,255,255,0.7)",
-            maxWidth: 800
+            maxWidth: 850
           }}>
-            Operational Advisory Firm for Critical Industrial Environments
+            Firma de consultoría operativa especializada en industrias críticas:
+            petróleo, minería, transporte y construcción.
           </h2>
-
-          {/* LANGUAGE SWITCH */}
-          <div style={{
-            marginTop: 25,
-            display: "flex",
-            gap: 10
-          }}>
-            <button onClick={() => setLang("es")} style={btn(lang === "es")}>
-              Español
-            </button>
-            <button onClick={() => setLang("en")} style={btn(lang === "en")}>
-              English
-            </button>
-          </div>
 
         </header>
 
-        {/* CONTENIDO */}
-        {children(lang)}
+        {children}
 
       </body>
     </html>
   );
-}
-
-function btn(active: boolean): React.CSSProperties {
-  return {
-    padding: "8px 14px",
-    borderRadius: 8,
-    border: "1px solid rgba(255,255,255,0.2)",
-    background: active ? "white" : "transparent",
-    color: active ? "#0b1220" : "white",
-    cursor: "pointer"
-  };
 }
