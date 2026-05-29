@@ -1,105 +1,143 @@
-  "use client";
-
-import { useState } from "react";
-
-export default function Home() {
-  const [lang] = useState<"es" | "en">("es");
-
+ export default function Home() {
   return (
-    <div style={{ padding: "20px", textAlign: "center" }}>
+    <div>
 
       {/* HERO */}
-      <h1 style={{ fontSize: 52 }}>
-        {lang === "es"
-          ? "Socio estratégico en operaciones industriales críticas"
-          : "Strategic partner for critical industrial operations"}
-      </h1>
-
-      <p style={{
-        maxWidth: 900,
-        margin: "20px auto",
-        color: "rgba(255,255,255,0.7)",
-        fontSize: 18
+      <section style={{
+        textAlign: "center",
+        padding: "120px 20px 60px"
       }}>
-        {lang === "es"
-          ? "NEXOR es una firma de consultoría operativa enfocada en minería, petróleo, transporte y construcción, especializada en optimización logística y administrativa."
-          : "NEXOR is an operational advisory firm focused on mining, oil & gas, transportation and construction, specializing in logistics and administrative optimization."}
-      </p>
+        <h1 style={{ fontSize: 54, marginBottom: 20 }}>
+          Operational excellence for complex industries
+        </h1>
 
-      {/* SECTORES */}
-      <h2 style={{ marginTop: 80 }}>
-        {lang === "es" ? "Industrias" : "Industries"}
-      </h2>
+        <p style={{
+          maxWidth: 900,
+          margin: "0 auto",
+          color: "rgba(255,255,255,0.65)",
+          fontSize: 18,
+          lineHeight: 1.7
+        }}>
+          NEXOR is a global advisory firm focused on operational performance,
+          logistics architecture, and administrative system optimization for
+          high-complexity industrial environments.
+        </p>
+      </section>
 
-      <p style={{ color: "rgba(255,255,255,0.6)" }}>
-        Oil & Gas • Mining • Construction • Transportation
-      </p>
-
-      {/* PROBLEMAS */}
-      <h2 style={{ marginTop: 80 }}>
-        {lang === "es" ? "Problemas que resolvemos" : "Problems we solve"}
-      </h2>
-
-      <div style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-        gap: 20,
-        marginTop: 30
+      {/* IMPACTO */}
+      <section style={{
+        padding: "80px 40px",
+        textAlign: "center",
+        background: "rgba(255,255,255,0.02)"
       }}>
-        {[
-          lang === "es"
-            ? "Falta de coordinación operativa"
-            : "Lack of operational coordination",
-
-          lang === "es"
-            ? "Sobrecarga administrativa"
-            : "Administrative overload",
-
-          lang === "es"
-            ? "Ineficiencia logística"
-            : "Logistical inefficiency",
-
-          lang === "es"
-            ? "Desconexión entre campo y oficina"
-            : "Field-office misalignment"
-        ].map((t) => (
-          <div key={t} style={{
-            padding: 20,
-            background: "rgba(255,255,255,0.05)",
-            borderRadius: 12
-          }}>
-            {t}
-          </div>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div style={{ marginTop: 100 }}>
-        <h2>
-          {lang === "es"
-            ? "Hablemos de operación"
-            : "Let’s discuss operations"}
-        </h2>
+        <h2>Operational focus</h2>
 
         <p style={{ color: "rgba(255,255,255,0.6)" }}>
-          {lang === "es"
-            ? "Contacto ejecutivo directo con el equipo NEXOR"
-            : "Direct executive contact with NEXOR team"}
+          Oil & Gas • Mining • Construction • Transportation • Infrastructure
+        </p>
+      </section>
+
+      {/* PROBLEMAS */}
+      <section style={{ padding: "90px 40px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 40 }}>
+          Structural operational challenges
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+          gap: 20
+        }}>
+          {[
+            "Operational fragmentation between field and headquarters",
+            "Excess administrative load reducing execution speed",
+            "Logistical inefficiencies affecting continuity",
+            "Lack of integrated operational visibility"
+          ].map((p) => (
+            <div key={p} style={{
+              padding: 22,
+              borderRadius: 12,
+              background: "rgba(255,255,255,0.04)",
+              border: "1px solid rgba(255,255,255,0.08)"
+            }}>
+              {p}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* METODOLOGÍA */}
+      <section style={{
+        padding: "110px 40px",
+        textAlign: "center"
+      }}>
+        <h2>How we operate</h2>
+
+        <p style={{
+          maxWidth: 900,
+          margin: "20px auto",
+          color: "rgba(255,255,255,0.65)",
+          lineHeight: 1.7
+        }}>
+          We integrate directly into client operations, analyzing workflows,
+          redesigning processes, and embedding execution capabilities within
+          existing organizational structures.
+        </p>
+      </section>
+
+      {/* CAPACIDADES */}
+      <section style={{ padding: "90px 40px" }}>
+        <h2 style={{ textAlign: "center", marginBottom: 40 }}>
+          Core capabilities
+        </h2>
+
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
+          gap: 20
+        }}>
+          {[
+            "Operational system design",
+            "Logistics coordination optimization",
+            "Administrative process engineering",
+            "Execution integration in field operations"
+          ].map((c) => (
+            <div key={c} style={{
+              padding: 22,
+              background: "rgba(255,255,255,0.04)",
+              borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.08)"
+            }}>
+              {c}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA FINAL */}
+      <section style={{
+        textAlign: "center",
+        padding: "140px 20px"
+      }}>
+        <h2>Engage with NEXOR Global Advisory</h2>
+
+        <p style={{ color: "rgba(255,255,255,0.65)" }}>
+          Executive-level operational partnership for industrial transformation.
         </p>
 
         <a href="#" style={{
           display: "inline-block",
-          marginTop: 20,
-          padding: "14px 26px",
+          marginTop: 25,
+          padding: "14px 28px",
           background: "white",
           color: "#0b1220",
           borderRadius: 12,
-          textDecoration: "none",
-          fontWeight: "bold"
+          fontWeight: "bold",
+          textDecoration: "none"
         }}>
-          {lang === "es" ? "Contactar" : "Contact"}
+          Contact advisory team
         </a>
-      </div>
+      </section>
 
     </div>
   );

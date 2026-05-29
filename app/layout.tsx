@@ -1,69 +1,51 @@
- "use client";
-
-import { useState } from "react";
-
-export default function RootLayout({
+ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const [lang, setLang] = useState<"es" | "en">("es");
-
   return (
-    <html lang={lang}>
+    <html lang="es">
       <body style={{
         margin: 0,
-        fontFamily: "Arial, sans-serif",
         background: "#0b1220",
-        color: "white"
+        color: "white",
+        fontFamily: "Arial, sans-serif"
       }}>
 
-        {/* HEADER PREMIUM */}
+        {/* LOGO CENTRADO GRANDE */}
         <header style={{
           display: "flex",
-          justifyContent: "center",
-          padding: "40px 20px"
+          flexDirection: "column",
+          alignItems: "center",
+          padding: "60px 20px 20px 20px",
+          textAlign: "center"
         }}>
+          
           <img
             src="/logo.png"
             alt="NEXOR"
             style={{
-              width: 180,
-              height: "auto"
+              width: 260,
+              height: "auto",
+              marginBottom: 20
             }}
           />
+
+          {/* SLOGAN */}
+          <h2 style={{
+            fontWeight: 300,
+            fontSize: 18,
+            color: "rgba(255,255,255,0.7)",
+            maxWidth: 700
+          }}>
+            Operational Strategy & Industrial Execution Partner
+          </h2>
+
         </header>
 
-        {/* LANGUAGE SWITCH */}
-        <div style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: 10,
-          marginBottom: 20
-        }}>
-          <button onClick={() => setLang("es")} style={btn(lang === "es")}>
-            Español
-          </button>
-          <button onClick={() => setLang("en")} style={btn(lang === "en")}>
-            English
-          </button>
-        </div>
-
-        {/* CONTENIDO */}
         {children}
 
       </body>
     </html>
   );
-}
-
-function btn(active: boolean): React.CSSProperties {
-  return {
-    padding: "8px 14px",
-    borderRadius: 8,
-    border: "1px solid rgba(255,255,255,0.2)",
-    background: active ? "white" : "transparent",
-    color: active ? "#0b1220" : "white",
-    cursor: "pointer"
-  };
 }
