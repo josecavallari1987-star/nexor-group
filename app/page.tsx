@@ -22,10 +22,14 @@
         </p>
 
         <div style={{ marginTop: 35, display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <a href="#diagnostico" style={buttonPrimary}>
-            Solicitar Diagnóstico Empresarial
-          </a>
-
+          <a
+  href="https://wa.me/5492994737731?text=Hola%20Nexor%20Group%2C%20quiero%20solicitar%20un%20Diagn%C3%B3stico%20Empresarial%20Integral."
+  target="_blank"
+  rel="noopener noreferrer"
+  style={buttonPrimary}
+>
+  Solicitar Diagnóstico Empresarial
+</a>
           <a href={whatsapp} target="_blank" style={buttonSecondary}>
             Contactar por WhatsApp
           </a>
