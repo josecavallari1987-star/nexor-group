@@ -160,8 +160,12 @@
 
         <div style={{ marginTop: 30 }}>
           <a href={whatsapp} target="_blank" style={buttonPrimary}>
-             const whatsapp = "https://wa.me/542994737731"
-          </a>
+             const whatsapp  <a
+  href="https://wa.me/5492994737731"
+  target="_blank"
+  rel="noopener noreferrer"
+   style={buttonPrimary}
+</a>
         </div>
 
         <p style={{ marginTop: 35, color: "rgba(255,255,255,0.60)" }}>
