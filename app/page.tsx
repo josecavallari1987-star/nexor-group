@@ -150,33 +150,33 @@
         </p>
       </section>
 
-      {/* CONTACTO */}
-      <section style={{ textAlign: "center", padding: "120px 20px" }}>
-        <h2 style={{ fontSize: 38 }}>Hablemos de su empresa</h2>
+       {/* CONTACTO */}
+<section style={{ textAlign: "center", padding: "120px 20px" }}>
+  <h2 style={{ fontSize: 38 }}>Hablemos de su empresa</h2>
 
-        <p style={textMuted}>
-          Solicite una reunión inicial y conozca cómo Nexor Group puede ayudar a mejorar la gestión de su organización.
-        </p>
+  <p style={textMuted}>
+    Solicite una reunión inicial y conozca cómo Nexor Group puede ayudar a mejorar la gestión de su organización.
+  </p>
 
-        <div style={{ marginTop: 30 }}>
-          <a href={whatsapp} target="_blank" style={buttonPrimary}>
-             const whatsapp  <a
-  href="https://wa.me/5492994737731"
-  target="_blank"
-  rel="noopener noreferrer"
-   style={buttonPrimary}
-</a>
-        </div>
+  <div style={{ marginTop: 30 }}>
+    <a
+      href="https://wa.me/5492994737731"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={buttonPrimary}
+    >
+      Contactar por WhatsApp
+    </a>
+  </div>
 
-        <p style={{ marginTop: 35, color: "rgba(255,255,255,0.60)" }}>
-          josecavallari@nexorgroup.com.ar
-          <br />
-          nexorgroup.com.ar
-          <br />
-          San Rafael, Mendoza, Argentina
-        </p>
-      </section>
-
+  <p style={{ marginTop: 35, color: "rgba(255,255,255,0.60)" }}>
+    josecavallari@nexorgroup.com.ar
+    <br />
+    nexorgroup.com.ar
+    <br />
+    San Rafael, Mendoza, Argentina
+  </p>
+</section>
     </div>
   );
 }
