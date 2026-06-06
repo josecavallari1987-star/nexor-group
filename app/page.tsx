@@ -1,13 +1,13 @@
  export default function Home() {
-   const whatsapp = "https://wa.me/542994737731"
+  const whatsapp =
+    "https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20informacion%20sobre%20sus%20servicios.";
 
   return (
     <div style={{ background: "#05070d", color: "white", minHeight: "100vh" }}>
-
       {/* HERO */}
       <section style={{ textAlign: "center", padding: "140px 20px 80px" }}>
         <h1 style={{ fontSize: 56, maxWidth: 1100, margin: "0 auto" }}>
-          Impulsamos el crecimiento de empresas mediante gestión, administración y transformación digital
+          Impulsamos el crecimiento de empresas a través de la gestión, la estrategia y la transformación operativa
         </h1>
 
         <p style={{
@@ -17,19 +17,22 @@
           fontSize: 19,
           lineHeight: 1.7
         }}>
-          Ayudamos a empresas de construcción, transporte, petróleo, minería e industria
-          a optimizar procesos, reducir costos, mejorar la productividad y alcanzar mejores resultados.
+          Acompañamos a empresas de construcción, transporte, petróleo, minería y servicios
+          a ordenar procesos, fortalecer su administración, optimizar operaciones y convertir
+          la gestión en resultados concretos.
         </p>
 
         <div style={{ marginTop: 35, display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
           <a
- href="https://api.whatsapp.com/send?phone=5492994737731&text=Hola%20Nexor%20Group,%20quiero%20solicitar%20un%20Diagnostico%20Empresarial%20Integral."
-  rel="noopener noreferrer"
-  style={buttonPrimary}
->
-  Solicitar Diagnóstico Empresarial
-</a>
-          <a href={whatsapp} target="_blank" style={buttonSecondary}>
+            href="https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20un%20Diagnostico%20Empresarial%20Integral."
+            target="_blank"
+            rel="noopener noreferrer"
+            style={buttonPrimary}
+          >
+            Solicitar Diagnóstico
+          </a>
+
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" style={buttonSecondary}>
             Contactar por WhatsApp
           </a>
         </div>
@@ -38,31 +41,73 @@
       {/* SERVICIOS */}
       <section style={{ padding: "90px 40px" }}>
         <h2 style={{ textAlign: "center", marginBottom: 15, fontSize: 36 }}>
-          Servicios
+          Soluciones Nexor Group
         </h2>
 
         <p style={{ textAlign: "center", color: "rgba(255,255,255,0.65)", marginBottom: 45 }}>
-          Soluciones prácticas para empresas que necesitan orden, control y crecimiento.
+          Servicios diseñados para empresas que necesitan ordenar su gestión,
+          optimizar procesos y crecer con mayor control.
         </p>
 
         <div style={grid}>
           {[
             {
               t: "Diagnóstico Empresarial Integral",
-              d: "Analizamos la situación administrativa, comercial y digital de su empresa para detectar oportunidades de mejora y elaborar un plan de acción concreto."
+              d: "Evaluamos administración, operaciones, finanzas, ventas y digitalización para detectar oportunidades de mejora y definir un plan de acción profesional."
             },
             {
-              t: "Consultoría Empresarial",
-              d: "Acompañamos a organizaciones en la optimización de procesos, control de gestión, administración y desarrollo operativo."
+              t: "Optimización Administrativa",
+              d: "Mejoramos organización documental, presupuestos, indicadores, seguimiento de tareas y control interno para reducir errores y ganar eficiencia."
             },
             {
-              t: "Nexor Academy",
-              d: "Capacitación profesional orientada a empleo, industria, administración, logística, tecnología y desarrollo empresarial."
+              t: "Gestión Operativa y Logística",
+              d: "Analizamos procesos, recursos, tiempos operativos y coordinación logística para mejorar productividad, planificación y ejecución."
+            },
+            {
+              t: "Transformación Digital Empresarial",
+              d: "Implementamos herramientas simples y efectivas para mejorar el control, la comunicación, la automatización y la toma de decisiones."
             }
           ].map((s) => (
             <div key={s.t} style={card}>
               <h3>{s.t}</h3>
               <p style={textMuted}>{s.d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* METODO */}
+      <section style={{
+        padding: "100px 40px",
+        textAlign: "center",
+        background: "rgba(255,255,255,0.02)"
+      }}>
+        <h2 style={{ fontSize: 36 }}>Cómo trabajamos</h2>
+
+        <p style={{
+          maxWidth: 850,
+          margin: "20px auto 45px",
+          color: "rgba(255,255,255,0.65)",
+          lineHeight: 1.7
+        }}>
+          Aplicamos una metodología clara para transformar problemas de gestión
+          en oportunidades concretas de mejora.
+        </p>
+
+        <div style={grid}>
+          {[
+            { n: "01", t: "Diagnóstico", d: "Relevamos la situación actual de la empresa." },
+            { n: "02", t: "Evaluación", d: "Identificamos fortalezas, riesgos y oportunidades." },
+            { n: "03", t: "Estrategia", d: "Diseñamos un plan de acción priorizado." },
+            { n: "04", t: "Implementación", d: "Acompañamos la ejecución de las mejoras." },
+            { n: "05", t: "Resultados", d: "Medimos avances y optimizamos continuamente." }
+          ].map((m) => (
+            <div key={m.n} style={card}>
+              <p style={{ color: "#d4af37", fontSize: 28, fontWeight: "bold", margin: 0 }}>
+                {m.n}
+              </p>
+              <h3>{m.t}</h3>
+              <p style={textMuted}>{m.d}</p>
             </div>
           ))}
         </div>
@@ -74,7 +119,7 @@
         textAlign: "center",
         background: "rgba(255,255,255,0.03)"
       }}>
-        <h2 style={{ fontSize: 38 }}>Diagnóstico Empresarial Integral</h2>
+        <h2 style={{ fontSize: 38 }}>Diagnóstico Empresarial Integral Nexor</h2>
 
         <p style={{
           maxWidth: 900,
@@ -83,19 +128,18 @@
           lineHeight: 1.7,
           fontSize: 18
         }}>
-          Nuestro diagnóstico permite conocer el estado actual de la empresa,
-          identificar problemas operativos y definir acciones concretas para mejorar
-          administración, procesos, ventas y presencia digital.
+          Una herramienta profesional diseñada para conocer el estado real de la organización,
+          detectar problemas ocultos y definir acciones concretas de mejora.
         </p>
 
         <div style={grid}>
           {[
             "Relevamiento administrativo",
-            "Diagnóstico comercial",
+            "Análisis operativo",
+            "Evaluación comercial",
             "Diagnóstico digital",
             "Informe ejecutivo PDF",
-            "Plan de acción de 90 días",
-            "Reunión de devolución"
+            "Plan de acción de 90 días"
           ].map((item) => (
             <div key={item} style={smallCard}>
               {item}
@@ -117,7 +161,13 @@
           <p style={textMuted}>
             Diagnóstico Empresarial Integral sin costo para las primeras empresas participantes.
           </p>
-          <a href={whatsapp} target="_blank" style={buttonPrimary}>
+
+          <a
+            href="https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20un%20Diagnostico%20Empresarial%20Integral."
+            target="_blank"
+            rel="noopener noreferrer"
+            style={buttonPrimary}
+          >
             Solicitar ahora
           </a>
         </div>
@@ -153,33 +203,34 @@
         </p>
       </section>
 
-       {/* CONTACTO */}
-<section style={{ textAlign: "center", padding: "120px 20px" }}>
-  <h2 style={{ fontSize: 38 }}>Hablemos de su empresa</h2>
+      {/* CIERRE */}
+      <section style={{ textAlign: "center", padding: "120px 20px" }}>
+        <h2 style={{ fontSize: 38 }}>Argentina tiene talento. Argentina tiene potencial.</h2>
 
-  <p style={textMuted}>
-    Solicite una reunión inicial y conozca cómo Nexor Group puede ayudar a mejorar la gestión de su organización.
-  </p>
+        <p style={{
+          maxWidth: 850,
+          margin: "20px auto",
+          color: "rgba(255,255,255,0.70)",
+          lineHeight: 1.7,
+          fontSize: 18
+        }}>
+          Nosotros aportamos gestión para transformarlo en resultados.
+        </p>
 
-  <div style={{ marginTop: 30 }}>
-    <a
-      href="https://wa.me/5492994737731"
-      target="_blank"
-      rel="noopener noreferrer"
-      style={buttonPrimary}
-    >
-      Contactar por WhatsApp
-    </a>
-  </div>
+        <div style={{ marginTop: 30 }}>
+          <a href={whatsapp} target="_blank" rel="noopener noreferrer" style={buttonPrimary}>
+            Contactar por WhatsApp
+          </a>
+        </div>
 
-  <p style={{ marginTop: 35, color: "rgba(255,255,255,0.60)" }}>
-    josecavallari@nexorgroup.com.ar
-    <br />
-    nexorgroup.com.ar
-    <br />
-    San Rafael, Mendoza, Argentina
-  </p>
-</section>
+        <p style={{ marginTop: 35, color: "rgba(255,255,255,0.60)" }}>
+          josecavallari@nexorgroup.com.ar
+          <br />
+          www.nexorgroup.com.ar
+          <br />
+          San Rafael, Mendoza, Argentina
+        </p>
+      </section>
     </div>
   );
 }
