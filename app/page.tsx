@@ -203,7 +203,7 @@
   </div>
 </section>
       {/* SERVICIOS */}
-      <section style={{ padding: "90px 40px" }}>
+       <section id="servicios" style={{ padding: "90px 40px" }}>
         <h2 style={{ textAlign: "center", marginBottom: 15, fontSize: 36 }}>
           Soluciones Nexor Group
         </h2>

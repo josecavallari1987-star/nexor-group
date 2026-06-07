@@ -1,3 +1,11 @@
+  export const metadata = {
+  title: "Nexor Group | Consultoría Industrial y Empresarial",
+  description:
+    "Consultoría especializada en petróleo, minería, transporte y construcción. Diagnóstico empresarial, optimización operativa y transformación organizacional.",
+  icons: {
+    icon: "/favicon.png",
+  },
+};
  export default function RootLayout({
   children,
 }: {
