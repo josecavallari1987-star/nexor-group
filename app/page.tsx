@@ -5,38 +5,66 @@
   return (
     <div style={{ background: "#05070d", color: "white", minHeight: "100vh" }}>
       {/* HERO */}
-      <section style={{ textAlign: "center", padding: "140px 20px 80px" }}>
-        <h1 style={{ fontSize: 56, maxWidth: 1100, margin: "0 auto" }}>
-          Impulsamos el crecimiento de empresas a través de la gestión, la estrategia y la transformación operativa
-        </h1>
+       <section style={{ padding: "140px 40px 90px" }}>
+  <div style={{
+    maxWidth: 1300,
+    margin: "0 auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+    gap: 50,
+    alignItems: "center"
+  }}>
+    <div>
+      <h1 style={{ fontSize: 54, lineHeight: 1.1, margin: 0 }}>
+        Impulsamos el crecimiento de empresas a través de la gestión, la estrategia y la transformación operativa
+      </h1>
 
-        <p style={{
-          maxWidth: 950,
-          margin: "24px auto",
-          color: "rgba(255,255,255,0.70)",
-          fontSize: 19,
-          lineHeight: 1.7
-        }}>
-          Acompañamos a empresas de construcción, transporte, petróleo, minería y servicios
-          a ordenar procesos, fortalecer su administración, optimizar operaciones y convertir
-          la gestión en resultados concretos.
-        </p>
+      <p style={{
+        maxWidth: 720,
+        margin: "24px 0 0",
+        color: "rgba(255,255,255,0.70)",
+        fontSize: 19,
+        lineHeight: 1.7
+      }}>
+        Acompañamos a empresas de construcción, transporte, petróleo, minería y servicios
+        a ordenar procesos, fortalecer su administración, optimizar operaciones y convertir
+        la gestión en resultados concretos.
+      </p>
 
-        <div style={{ marginTop: 35, display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
-          <a
-            href="https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20un%20Diagnostico%20Empresarial%20Integral."
-            target="_blank"
-            rel="noopener noreferrer"
-            style={buttonPrimary}
-          >
-            Solicitar Diagnóstico
-          </a>
+      <div style={{ marginTop: 35, display: "flex", gap: 16, flexWrap: "wrap" }}>
+        <a
+          href="https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20un%20Diagnostico%20Empresarial%20Integral."
+          target="_blank"
+          rel="noopener noreferrer"
+          style={buttonPrimary}
+        >
+          Solicitar Diagnóstico
+        </a>
 
-          <a href={whatsapp} target="_blank" rel="noopener noreferrer" style={buttonSecondary}>
-            Contactar por WhatsApp
-          </a>
-        </div>
-      </section>
+        <a href={whatsapp} target="_blank" rel="noopener noreferrer" style={buttonSecondary}>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div style={{
+      borderRadius: 24,
+      overflow: "hidden",
+      border: "1px solid rgba(212,175,55,0.35)",
+      boxShadow: "0 25px 80px rgba(0,0,0,0.45)"
+    }}>
+      <img
+        src="/images/hero-nexor-argentina.png"
+        alt="Nexor Group Argentina"
+        style={{
+          width: "100%",
+          height: "auto",
+          display: "block"
+        }}
+      />
+    </div>
+  </div>
+</section>
 
       {/* SERVICIOS */}
       <section style={{ padding: "90px 40px" }}>
