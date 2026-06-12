@@ -288,6 +288,112 @@
       </section>
 
       {/* METODO */}
+      {/* NEXOR OS */}
+<section
+  style={{
+    padding: "120px 40px",
+    background: "#0b1220",
+  }}
+>
+  <div
+    style={{
+      maxWidth: 1400,
+      margin: "0 auto",
+      textAlign: "center",
+    }}
+  >
+    <div
+      style={{
+        color: "#d4af37",
+        fontSize: 13,
+        fontWeight: 700,
+        letterSpacing: 3,
+        marginBottom: 18,
+        textTransform: "uppercase",
+      }}
+    >
+      Tecnología Nexor Group
+    </div>
+
+    <h2
+      style={{
+        fontSize: 48,
+        marginBottom: 20,
+      }}
+    >
+      NEXOR OS
+    </h2>
+
+    <p
+      style={{
+        maxWidth: 900,
+        margin: "0 auto 60px",
+        color: "rgba(255,255,255,0.70)",
+        fontSize: 18,
+        lineHeight: 1.8,
+      }}
+    >
+      Ecosistema digital de Nexor Group diseñado para optimizar la gestión
+      de talento, clientes, proyectos y procesos empresariales.
+    </p>
+
+    <div
+      style={{
+        display: "grid",
+        gridTemplateColumns: "repeat(auto-fit,minmax(280px,1fr))",
+        gap: 25,
+      }}
+    >
+      {[
+        {
+          titulo: "Nexor Talent",
+          texto: "Base de talento, reclutamiento y seguimiento de candidatos."
+        },
+        {
+          titulo: "Nexor CRM",
+          texto: "Gestión comercial, oportunidades y relaciones con clientes."
+        },
+        {
+          titulo: "Nexor Projects",
+          texto: "Gestión documental y control de proyectos."
+        },
+        {
+          titulo: "Nexor Analytics",
+          texto: "Indicadores estratégicos y reportes de gestión."
+        }
+      ].map((item) => (
+        <div
+          key={item.titulo}
+          style={{
+            padding: 35,
+            borderRadius: 22,
+            background: "rgba(255,255,255,0.035)",
+            border: "1px solid rgba(212,175,55,0.16)",
+          }}
+        >
+          <h3
+            style={{
+              color: "#d4af37",
+              fontSize: 24,
+              marginBottom: 18,
+            }}
+          >
+            {item.titulo}
+          </h3>
+
+          <p
+            style={{
+              color: "rgba(255,255,255,0.70)",
+              lineHeight: 1.7,
+            }}
+          >
+            {item.texto}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
       <section style={{
         padding: "100px 40px",
         textAlign: "center",

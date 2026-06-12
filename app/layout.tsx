@@ -12,13 +12,16 @@
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
-      <body style={{
-        margin: 0,
-        background: "#0b1220",
-        color: "white",
-        fontFamily: "Arial, sans-serif"
-      }}>
+     <html lang="es" suppressHydrationWarning>
+  <body
+    suppressHydrationWarning
+    style={{
+      margin: 0,
+      background: "#0b1220",
+      color: "white",
+      fontFamily: "Arial, sans-serif",
+    }}
+  >
 
         {/* IDENTIDAD DE FIRMA */}
         <header style={{
