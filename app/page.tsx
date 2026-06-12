@@ -67,6 +67,9 @@
       <a href="#servicios" style={menuLink}>
         Servicios
       </a>
+      <a href="#nexor-os" style={menuLink}>
+  Nexor OS
+</a>
 
       <a href="#metodologia" style={menuLink}>
         Metodología
@@ -290,6 +293,7 @@
       {/* METODO */}
       {/* NEXOR OS */}
 <section
+id="nexor-os"
   style={{
     padding: "120px 40px",
     background: "#0b1220",
