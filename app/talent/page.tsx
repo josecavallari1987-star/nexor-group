@@ -122,21 +122,21 @@ const whatsappLinks = {
 
     <nav className="hidden items-center gap-8 md:flex">
       <a
-        href="#registro"
+        href="/talent/empresa"
         className="text-sm text-gray-300 transition hover:text-white"
       >
         Empresas
       </a>
 
       <a
-        href="#registro"
+       href="/talent/profesional"
         className="text-sm text-gray-300 transition hover:text-white"
       >
         Profesionales
       </a>
 
       <a
-        href="#registro"
+        href="/talent/proveedor"
         className="text-sm text-gray-300 transition hover:text-white"
       >
         Proveedores
