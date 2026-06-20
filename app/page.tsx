@@ -67,7 +67,7 @@
       <a href="#servicios" style={menuLink}>
         Servicios
       </a>
-      <a href="/nexor-talent" style={menuLink}>
+      <a href="/talent" style={menuLink}>
   Nexor Talent
 </a>
       <a href="#nexor-os" style={menuLink}>
