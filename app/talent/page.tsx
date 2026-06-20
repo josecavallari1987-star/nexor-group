@@ -150,8 +150,8 @@ const whatsappLinks = {
       </a>
 
       <a
-        href="#registro"
-        className="rounded-full border border-blue-500 px-5 py-2 text-sm font-semibold transition hover:bg-blue-600"
+        href="/talent/empresa"
+        className="text-sm text-gray-300 transition hover:text-white"
       >
         Ingresar
       </a>
@@ -302,7 +302,7 @@ cursor-pointer
                 </p>
 
                 <a
-                  href="#registro"
+                 <a href="/talent/profesional" 
                   className="inline-block rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold transition duration-300 hover:bg-blue-500"
                 >
                   {card.button}
