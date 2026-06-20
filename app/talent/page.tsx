@@ -150,11 +150,11 @@ const whatsappLinks = {
       </a>
 
       <a
-        href="/talent/empresa"
-        className="text-sm text-gray-300 transition hover:text-white"
-      >
-        Ingresar
-      </a>
+  href="/"
+  className="text-sm text-gray-300 transition hover:text-white"
+>
+  Ingresar
+</a>
     </nav>
 
   </div>
@@ -302,11 +302,19 @@ cursor-pointer
                 </p>
 
                 <a
-                 <a href="/talent/profesional" 
-                  className="inline-block rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold transition duration-300 hover:bg-blue-500"
-                >
-                  {card.button}
-                </a>
+  href={
+    card.title === "Empresas"
+      ? "/talent/empresa"
+      : card.title === "Profesionales"
+      ? "/talent/profesional"
+      : card.title === "Proveedores"
+      ? "/talent/proveedor"
+      : "#academia"
+  }
+  className="inline-block rounded-full bg-blue-600 px-6 py-3 text-sm font-semibold transition duration-300 hover:bg-blue-500"
+>
+  {card.button}
+</a>
               </div>
             ))}
           </div>
