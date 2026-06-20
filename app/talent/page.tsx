@@ -520,8 +520,8 @@ cursor-pointer
     </div>
 
     <div className="grid gap-6 md:grid-cols-2">
-
-
+      
+        
       </div>
   {jobs.map((job) => (
     <div
@@ -572,62 +572,6 @@ CV:`
     </div>
   ))}
 </div>
-</section>
-
-<section className="px-6 py-24">
-  <div className="mx-auto max-w-6xl">
-    <div className="mb-12 text-center">
-      <p className="mb-4 text-sm uppercase tracking-[0.35em] text-blue-300">
-        Por qué elegirnos
-      </p>
-
-      <h3 className="text-3xl font-bold md:text-4xl">
-        ¿Por qué NEXOR TALENT?
-      </h3>
-    </div>
-
-    <div className="grid gap-6 md:grid-cols-4">
-      {[
-        {
-          code: "LATAM",
-          title: "Cobertura regional",
-          text: "Conectamos empresas, profesionales y proveedores en 11 países de Latinoamérica.",
-        },
-        {
-          code: "IND",
-          title: "Foco industrial",
-          text: "Especialización en petróleo, minería, construcción, transporte, logística e industria.",
-        },
-        {
-          code: "FAST",
-          title: "Contacto directo",
-          text: "Facilitamos conexiones rápidas para oportunidades laborales, comerciales y operativas.",
-        },
-        {
-          code: "GROW",
-          title: "Crecimiento",
-          text: "Un ecosistema preparado para empleo, servicios, capacitación y desarrollo profesional.",
-        },
-      ].map((item) => (
-        <div
-          key={item.title}
-          className="rounded-3xl border border-white/10 bg-white/[0.04] p-8 shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/40 hover:shadow-[0_0_40px_rgba(59,130,246,0.15)]"
-        >
-          <div className="mb-6 inline-flex rounded-2xl bg-blue-600/20 px-4 py-3 text-xs font-bold tracking-[0.25em] text-blue-200">
-            {item.code}
-          </div>
-
-          <h4 className="mb-4 text-xl font-bold">
-            {item.title}
-          </h4>
-
-          <p className="text-sm leading-6 text-gray-300">
-            {item.text}
-          </p>
-        </div>
-      ))}
-    </div>
-  </div>
 </section>
 
 
