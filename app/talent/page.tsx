@@ -220,17 +220,33 @@ cursor-pointer
     </p>
 
     <div className="flex flex-wrap justify-center gap-4">
-      {["Soy Empresa", "Soy Profesional", "Soy Proveedor", "Academia"].map(
-        (item) => (
-          <a
-            key={item}
-            href="#registro"
-            className="rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-600"
-          >
-            {item}
-          </a>
-        )
-      )}
+      <a
+  href="/talent/empresa"
+  className="rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-600"
+>
+  Soy Empresa
+</a>
+
+<a
+  href="/talent/profesional"
+  className="rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-600"
+>
+  Soy Profesional
+</a>
+
+<a
+  href="/talent/proveedor"
+  className="rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-600"
+>
+  Soy Proveedor
+</a>
+
+<a
+  href="#academia"
+  className="rounded-full border border-blue-400/50 px-6 py-3 text-sm font-semibold text-white transition duration-300 hover:-translate-y-1 hover:bg-blue-600"
+>
+  Academia
+</a>
     </div>
   </div>
 </section>
@@ -617,8 +633,7 @@ CV:`
               <input className="mb-5 w-full rounded-xl bg-black/40 p-3 text-sm outline-none" placeholder="WhatsApp" />
 
               <a
-  href={whatsappLinks.empresa}
-  target="_blank"
+  href="/talent/empresa"
   className="block w-full rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold transition hover:bg-blue-500"
 >
   Registrar Empresa
@@ -636,8 +651,7 @@ CV:`
               <input type="file" className="mb-5 w-full rounded-xl bg-black/40 p-3 text-sm text-gray-300 outline-none" />
 
               <a
-  href={whatsappLinks.profesional}
-  target="_blank"
+  href="/talent/profesional"
   className="block w-full rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold transition hover:bg-blue-500"
 >
   Crear Perfil Profesional
@@ -654,8 +668,7 @@ CV:`
               <input className="mb-5 w-full rounded-xl bg-black/40 p-3 text-sm outline-none" placeholder="WhatsApp" />
 
               <a
-  href={whatsappLinks.proveedor}
-  target="_blank"
+  href="/talent/proveedor"
   className="block w-full rounded-full bg-blue-600 px-5 py-3 text-center text-sm font-semibold transition hover:bg-blue-500"
 >
   Registrar Proveedor
