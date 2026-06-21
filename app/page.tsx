@@ -1,3 +1,7 @@
+"use client";
+
+import { useState } from "react";
+
  const menuLink = {
   color: "white",
   textDecoration: "none",
@@ -6,6 +10,8 @@
  export default function Home() {
   const whatsapp =
     "https://wa.me/5492994737731?text=Hola%20Nexor%20Group,%20quiero%20solicitar%20informacion%20sobre%20sus%20servicios.";
+
+    const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <div style={{ background: "#05070d", color: "white", minHeight: "100vh" }}>
@@ -52,7 +58,12 @@
         ESTRATEGIA • GESTIÓN • RESULTADOS
       </div>
     </div>
-
+<button
+  className="mobile-menu-button"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  ☰
+</button>
     <nav
       style={{
         display: "flex",
@@ -98,6 +109,24 @@
         Solicitar Diagnóstico
       </a>
     </nav>
+    {menuOpen && (
+  <div className="mobile-menu">
+    <a href="#industrias">Industrias</a>
+    <a href="#servicios">Servicios</a>
+    <a href="/talent">Nexor Talent</a>
+    <a href="#nexor-os">Nexor OS</a>
+    <a href="#metodologia">Metodología</a>
+    <a href="#diagnostico">Diagnóstico</a>
+
+    <a
+      href={whatsapp}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Solicitar Diagnóstico
+    </a>
+  </div>
+)}
   </div>
 </header>
        
