@@ -81,6 +81,11 @@ import { useState } from "react";
       <a href="/talent" style={menuLink}>
   Nexor Talent
 </a>
+
+<a href="/expansion" style={menuLink}>
+  Nexor Expansion
+</a>
+
       <a href="#nexor-os" style={menuLink}>
   Nexor OS
 </a>
@@ -114,6 +119,7 @@ import { useState } from "react";
     <a href="#industrias">Industrias</a>
     <a href="#servicios">Servicios</a>
     <a href="/talent">Nexor Talent</a>
+    <a href="/expansion">Nexor Expansion</a>
     <a href="#nexor-os">Nexor OS</a>
     <a href="#metodologia">Metodología</a>
     <a href="#diagnostico">Diagnóstico</a>
@@ -394,8 +400,12 @@ id="nexor-os"
           texto: "Gestión documental y control de proyectos."
         },
         {
-          titulo: "Nexor Analytics",
-          texto: "Indicadores estratégicos y reportes de gestión."
+  titulo: "Nexor Analytics",
+  texto: "Indicadores estratégicos y reportes de gestión."
+},
+{
+  titulo: "Nexor Expansion",
+  texto: "Expansión empresarial, implementación operativa y desarrollo comercial en nuevos mercados."
         }
       ].map((item) => (
         <div
